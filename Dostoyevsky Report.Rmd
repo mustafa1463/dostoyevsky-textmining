@@ -1,0 +1,490 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE, message = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("Dostoyevsky.R")
+```
+
+<br>
+<br>
+<p id = "head">A Text Analysis of Dostoyevsky's Books</p><br>
+<p id = "subhead">By Genesis Data</p><br>
+
+<p id = "cemal"><em>"I read Dostoyevsky's books in the year of 1944, and I have no peace of mind since then"</em><p><br>
+
+```{css, echo = FALSE}
+
+#head {
+text-align: center;
+font-size: 35px;
+font-weight: bold;}
+
+#subhead {
+text-align: right;
+font-size: 25px;
+font-weight: bold;}
+
+p {
+font-size: 20px;;
+}
+
+#cemal {
+text-align: center;
+font-size: 20px;}
+```
+
+
+
+<p style="text-indent: 40px;">
+<font size="4">
+The aim of this project is to find certain words that give clues about the general framework of Dostoyevsky's books. The project can show the most used words in the book, their sentiments, plot them, bigrams, etc.
+</font>
+</p>
+<br>  
+
+# 1 - Crime and Punishment {.tabset}
+<br>  
+
+## Frequency of the words{.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+crime_and_punishment
+```
+
+## Frequency Plot {.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+frequency_plot(crime_and_punishment)
+```
+
+
+## Frequent words with sentiments{.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+sentiment_crime
+```
+
+
+## Sentiment Score of the Book{.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+story_analyzer(sentiment_crime)
+```
+
+## Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE, fig.dim = c(10, 6)}
+sentiment_summary(sentiment_crime)
+```
+
+## Negative Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+negative_crime_plot
+```
+
+## Positive Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+positive_crime_plot
+```
+
+
+## Sentiment Timeline {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+timeline_story(crime_and_punishment_raw)
+```
+
+## Bigrams {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+crime_and_punishment_bigram 
+```
+
+
+## Bigram Graph {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+crime_and_punishment_bigram_graph
+```
+
+<br>  
+
+# 2 - Notes from the Underground {.tabset}
+<br>  
+
+## Frequency of the words{.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+notes_from_underground
+```
+
+## Frequency Plot {.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+frequency_plot(notes_from_underground)
+```
+
+
+## Frequent words with sentiments{.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+sentiment_underground
+```
+
+
+## Sentiment Score of the Book{.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+story_analyzer(sentiment_underground)
+```
+
+## Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE, fig.dim = c(10, 6)}
+sentiment_summary(sentiment_underground)
+```
+
+## Negative Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+negative_underground_plot
+```
+
+## Positive Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+positive_underground_plot
+```
+
+
+## Sentiment Timeline {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+timeline_story(notes_from_underground_raw)
+```
+
+## Bigrams {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+notes_from_underground_bigram
+```
+
+
+## Bigram Graph {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+notes_from_underground_bigram_graph
+```
+
+
+<br>  
+
+# 3 - The Brothers Karamazov {.tabset}
+<br>  
+
+## Frequency of the words{.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+brothers_karamazov
+```
+
+## Frequency Plot {.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+frequency_plot(brothers_karamazov)
+```
+
+
+## Frequent words with sentiments{.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+sentiment_karamazov
+```
+
+
+## Sentiment Score of the Book{.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+story_analyzer(sentiment_karamazov)
+```
+
+## Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE, fig.dim = c(10, 6)}
+sentiment_summary(sentiment_karamazov)
+```
+
+## Negative Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+negative_karamazov_plot
+```
+
+## Positive Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+positive_karamazov_plot
+```
+
+
+## Sentiment Timeline {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+timeline_story(brothers_karamazov_raw)
+```
+
+## Bigrams {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+brothers_karamazov_bigram
+```
+
+
+## Bigram Graph {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+brothers_karamazov_bigram_graph
+```
+
+<br>  
+
+
+# 4 - The House of the Dead {.tabset}
+<br>  
+
+## Frequency of the words{.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+house_of_dead
+```
+
+## Frequency Plot {.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+frequency_plot(house_of_dead)
+```
+
+
+## Frequent words with sentiments{.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+sentiment_dead
+```
+
+
+## Sentiment Score of the Book{.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+story_analyzer(sentiment_dead)
+```
+
+## Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE, fig.dim = c(10, 6)}
+sentiment_summary(sentiment_dead)
+```
+
+## Negative Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+negative_dead_plot
+```
+
+## Positive Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+positive_dead_plot
+```
+
+
+## Sentiment Timeline {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+timeline_story(house_of_dead_raw)
+```
+
+## Bigrams {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+house_of_dead_bigram
+```
+
+
+## Bigram Graph {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+house_of_dead_bigram_graph
+```
+
+<br>  
+
+# 5 - The Idiot {.tabset}
+<br>  
+
+## Frequency of the words{.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+idiot
+```
+
+## Frequency Plot {.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+frequency_plot(idiot)
+```
+
+
+## Frequent words with sentiments{.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+sentiment_idiot
+```
+
+
+## Sentiment Score of the Book{.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+story_analyzer(sentiment_idiot)
+```
+
+## Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE, fig.dim = c(10, 6)}
+sentiment_summary(sentiment_idiot)
+```
+
+## Negative Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+negative_idiot_plot
+```
+
+## Positive Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+positive_idiot_plot
+```
+
+
+## Sentiment Timeline {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+timeline_story(idiot_raw)
+```
+
+## Bigrams {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+idiot_bigram 
+```
+
+
+## Bigram Graph {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+idiot_bigram_graph
+```
+
+<br>  
+
+# 6 - White Nights {.tabset}
+<br>  
+
+## Frequency of the words{.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+white_nights
+```
+
+## Frequency Plot {.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+frequency_plot(white_nights)
+```
+
+
+## Frequent words with sentiments{.tabset .tabset-fade}
+
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+sentiment_nights
+```
+
+
+## Sentiment Score of the Book{.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+story_analyzer(sentiment_nights)
+```
+
+## Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE, fig.dim = c(10, 6)}
+sentiment_summary(sentiment_nights)
+```
+
+## Negative Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+negative_nights_plot
+```
+
+## Positive Sentiments Plot {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+positive_nights_plot
+```
+
+
+## Sentiment Timeline {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+timeline_story(white_nights_raw)
+```
+
+## Bigrams {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+white_nights_bigram
+```
+
+
+## Bigram Graph {.tabset .tabset-fade}
+
+```{r, warning = FALSE, echo = FALSE, out.width = "105%", message = FALSE}
+white_nights_bigram_graph
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
